@@ -32,6 +32,8 @@ if __name__ == "__main__":
 
             """ Fait par Simon Kinet"""
             choix = int(input('Choisissez le numéro de la réponse: '))  # variable stockant un entier décidé par l'utilisateur
+            
+            # condition pour éviter des nombres erronés
             while choix > len(questions[i]) or choix <= 0:
                 print("Nombre invalide")
                 choix = int(input(
