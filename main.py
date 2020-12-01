@@ -1,4 +1,5 @@
 # dictionnaire test servant pour le hardcoding
+
 questions = {
     "Que signifie les initiales de RAM ?\n": {"1:Random Access Memory": True,
                                               "2:Repetitive Access Memory": False,
@@ -14,7 +15,7 @@ questions = {
 }
 
 if __name__ == "__main__":
-    def main():
+    def example():
         """" Fait par Christopher Fauconnier """
         qst_actuelle = 1  # variable qui va afficher dans la console le n° de qst
         result = 0  # variable conservant le "score" de l'user
@@ -30,8 +31,7 @@ if __name__ == "__main__":
                 print(j)
 
             """ Fait par Simon Kinet"""
-            choix = int(
-                input('Choisissez le numéro de la réponse: '))  # variable stockant un entier décidé par l'utilisateur
+            choix = int(input('Choisissez le numéro de la réponse: '))  # variable stockant un entier décidé par l'utilisateur
             while choix > len(questions[i]) or choix <= 0:
                 print("Nombre invalide")
                 choix = int(input(
@@ -48,6 +48,19 @@ if __name__ == "__main__":
 
         print("Vous avez réussi", result, "questions !")
 
-main()
-# appel de la fonction pour vérifier si tout fonctionne
-# print(len(questions["Que signifie les initiales de RAM ?\n"]))
+example()
+
+'''
+class Qst_user:
+    def __init__(self, question, réponse1, valeur1, réponse2, valeur2, réponse3, valeur3, réponse4, valeur4):
+
+        self.reponses = {réponse1: valeur1, réponse2: valeur2, réponse3: valeur3, réponse4: valeur4}
+        self.question = {question: self.reponses}
+
+    def __str__(self):
+        return str(self.question)
+
+
+test = Qst_user("je m'appelle :", "Chris", True, "Simon", False, "David", False, "Georges", False)
+print(test.question["je m'appelle :"])
+'''
